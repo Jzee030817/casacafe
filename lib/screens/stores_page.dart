@@ -48,8 +48,8 @@ class StoresPageBody extends StatelessWidget {
   }
 
   Widget storesList(
-      BuildContext context, ItemBloc bloc, List<StoreModel> stores) {
-    double deviceHeight = MediaQuery.of(context).size.height;
+    BuildContext context, ItemBloc bloc, List<StoreModel> stores) {
+    // double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = MediaQuery.of(context).size.width;
 
     return ListView.builder(

@@ -77,7 +77,7 @@ class ApiCartWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final ItemBloc itemBloc = ItemProvider.of(context);
     double deviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth = MediaQuery.of(context).size.width;
+    // double deviceWidth = MediaQuery.of(context).size.width;
     itemBloc.getCartLines();
     double temptot = 0;
 

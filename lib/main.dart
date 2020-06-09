@@ -17,6 +17,7 @@ import 'screens/signup_page.dart';
 import 'screens/stores_page.dart';
 import 'screens/submenu_page.dart';
 import 'screens/user_page.dart';
+import 'package:fl_ax_cdc/screens/splash_page.dart';
 
 void main() => runApp(CdcApp());
 
@@ -25,6 +26,7 @@ class CdcApp extends StatelessWidget {
     return UserProvider(
       child: ItemProvider(
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: appTheme,
           title: strTitleApp,
           onGenerateRoute: routes,
@@ -36,7 +38,7 @@ class CdcApp extends StatelessWidget {
   Route routes(RouteSettings settings) {
     switch (settings.name) {
       case '/':
-        return loadMainMenu();
+        return splashPage();
         break;
       case '/cat':
         final ItemModel item = settings.arguments;
@@ -173,4 +175,9 @@ class CdcApp extends StatelessWidget {
     });
   }
   
+  MaterialPageRoute splashPage(){
+    return MaterialPageRoute(builder: (context){
+      return Splash();
+    });
+  }
 }
